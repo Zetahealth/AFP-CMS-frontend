@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  html,
+  body { font-family: "Allerta Stencil", sans-serif !important; }
+
+  .prose,
+  .prose * { font-family: "Allerta Stencil", sans-serif !important; }
+
+  h1,h2,h3,h4,h5,h6,p,span,a,li,button,input,textarea {
+    font-family: "Allerta Stencil", sans-serif !important;
+  }
+}
+
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+/* a {
+  font-weight: 500;
+  color: white;
+  text-decoration: inherit;
+} */
+/* a:hover {
+  color: #535bf2;
+} */
+
+
+/* now your rules */
+.font-allerta { font-family: "Allerta Stencil", sans-serif; }
+
+/* hide scrollbar cross-browser (strong) */
+.no-scrollbar {
+  -ms-overflow-style: none !important; /* IE/Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
+}
+
+/* make sure box-sizing is sane */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.ProseMirror li {
+  margin-bottom: 0.25rem;
+}
+
+.user-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.user-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+
+
+
+/* Add in your CSS / global stylesheet */
+@keyframes logoEnter {
+  0% {
+    transform: translateY(250px) rotateY(100deg) scale(2);
+    opacity: 0.2;
+  }
+  40% {
+    transform: translateY(100px) rotateY(280deg)  scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) rotateY(360deg)  scale(1);
+    opacity: 1;
+  }
+}
+.logo-animate {
+  animation: logoEnter 1s ease-out forwards;
+}
+
+
+@keyframes logoDiagonal {
+  0% {
+    transform: translateX(550px) rotateY(100deg) scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0px) rotateY(360deg)  scale(1);
+    opacity: 1;
+  }
+}
+
+.logo-animate-diagonal {
+  animation: logoDiagonal 1s ease-out forwards;
+}
+
+@keyframes logoSliderInner {
+  0% {
+    transform: translateX(500px)  scale(1);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateX(0px)   scale(1);
+    opacity: 1;
+  }
+}
+
+.logo-animate-sliderInner {
+  animation: logoSliderInner 1s ease-out forwards;
+}
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes thumbview {
+  0% {
+    transform: translateX(-300px) rotateY(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) rotateY(360deg);
+    opacity: 1;
+  }
+}
+
+.animate-thumb-view {
+  animation: thumbview 0.8s ease-out forwards;
+}
+
+
+
+
+
+
+body {
+  /* margin: 5px; */
+  /* padding: 10px; */
+  /* place-items: center; */
+  /* min-width: 320px; */
+  /* min-height: 100vh; */
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f7f3f3;
+}
+
+
+@keyframes arrowMove {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+.arrow-animate {
+  display: inline-block;
+  animation: arrowMove 0.8s infinite ease-in-out;
+}
+
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #2462eb;
+  cursor: pointer;
+  transition: border-color 0.25s;
+} */
+
+/* button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}  */
+
+@media (prefers-color-scheme: light) {
+  /* :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #ffffff;
+  } */
+  /* button {
+    background-color: #2462eb;
+  } */
+}
